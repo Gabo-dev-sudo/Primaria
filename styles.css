@@ -679,6 +679,7 @@ header nav{
 
     .logo img{
         width: 20vw;
+        margin: 0;
     }
 
     .redes i{
@@ -738,11 +739,13 @@ header nav{
     .form .requisitos .descarga{
         font-size: 30px;
         margin: 0;
+        margin-bottom: 4%;
     }
     
     .form .requisitos .completa{
         font-size: 30px;
         margin: 0;
+        margin-bottom: 4%;
     }
     
     .form .requisitos .entrega{
