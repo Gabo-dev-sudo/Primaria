@@ -112,13 +112,14 @@ header nav{
 }
 
 .redes{
-    width: 20%;
+    width: max-content;
     height: 100%;
     display: flex;
     justify-content: center;
     gap: 8%;
     border-right: 2px solid  #2059bb;
     padding-top: 1vh;
+    padding-right: 50px;
 }
 
 .redes i{
@@ -654,6 +655,51 @@ header nav{
 
 
 
+
+@media (max-width: 1000px){
+    header{
+        nav .logo img{
+            @container scroll-state(stuck: top){
+                width: 15vw;
+            }
+        }
+    }
+
+    .logo img{
+        width: 15vw;
+    }
+
+    .redes i{
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .apartados{
+        text-align: center;
+    }
+
+    .apartados .botonav i{
+        font-size: 40px;
+    }
+
+    .secform article .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form .formatofondo{
+        margin-bottom: 3vh;
+    }
+
+    .form .requisitos{
+        width: 100%;
+    }
+
+    
+
+}
 
 
 
