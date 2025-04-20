@@ -143,10 +143,10 @@ header nav{
 }
 
 .apartados nav{
-    background-color: #2059bb;
     position: absolute;
     left: 0;
     margin-top: 1vh;
+    background-color: #2059bb;
 }
 
 .apartados nav .menu{
@@ -317,7 +317,7 @@ header nav{
 }
 
 .form .requisitos .descarga{
-    background-color: #fff6e8;
+    background-color: #ebe2d4;
     padding: 4vh 4vw;
     text-align: center;
     border-radius: 20px;
@@ -487,6 +487,11 @@ header nav{
     text-align: center;
 }
 
+.map iframe{
+    width: 95%;
+    height: 470px;
+}
+
 
 
 
@@ -545,6 +550,8 @@ header nav{
 .calendario img{
     width: 100%;
 }
+
+
 
 
 
@@ -698,6 +705,7 @@ header nav{
 
     .apartados{
         width: 10%;
+        margin-top: 7%;
         text-align: center;
     }
 
@@ -706,14 +714,14 @@ header nav{
     }
 
     .apartados nav .menu li{
-        padding: 25px;
         border-bottom: 2px solid white;
+        padding: 100px;
     }
 
     .apartados nav .menu li:nth-child(4){
         border-bottom: none;
     }
-
+    
     .apartados nav .menu li a{
         font-size: 40px;
     }
@@ -771,29 +779,73 @@ header nav{
 
 
 
-    .nuestras{
-        border-bottom: 5px solid black;
-    }
+
 
     .nuestras .contenido{
         width: 100%;
-        height: 70vh;
+        height: 80vh;
+    }
+
+    .contenido .cards h2{
+        text-align: center;
     }
 
     .nuestras .fondo{
         width: 100%;
-        height: 50vh;
+        height: 60vh;
     }
     
     .fondo .capa{
         width: 100%;
-        height: 50vh;
+        height: 60vh;
     }
     
     .fondo .img img{
-        width: 100%;
-        height: 50vh;
+        height: 60vh;
     }
+
+    .map iframe{
+        rotate: 90deg;
+        height: 50%;
+    }
+
+
+
+
+
+
+    
+
+    
+
+    .celebraciones h4{
+        font-size: 40px;
+    }
+
+    .celebraciones div:nth-child(2){
+        margin-right: 0;
+    }
+
+    .celebraciones div:nth-child(3){
+        margin-right: 10vw;
+    }
+
+    .celebraciones div:nth-child(4){
+        margin-right: 0;
+    }
+
+    .celebraciones div:nth-child(6){
+        margin-right: 0;
+    }
+
+
+
+
+
+
+
+
+
 
 }
 
