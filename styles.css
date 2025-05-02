@@ -38,8 +38,13 @@ header{
 
     nav{
         @container scroll-state(stuck: top){
-            background-color: #ffe2cf;
-            transition: .3s;
+            background-color: #ebe2d4;
+        }
+    }
+
+    .apartados nav{
+        @container scroll-state(stuck: top){
+            background-color: transparent;
         }
     }
 
@@ -134,42 +139,38 @@ header nav{
     border: 1.5px solid white;
 }
 
-
-.apartados{
-    width: 4%;
-    height: 100%;
-    margin-top: 7vh;
-
-}
-
-.apartados nav{
-    position: absolute;
-    left: 0;
-    margin-top: 1vh;
+.redes i:hover{
     background-color: #2059bb;
-}
-
-.apartados nav .menu{
-    display: none;
-}
-
-.apartados nav .menu li a{
-    text-decoration: none;
-    font-size: 20px;
-    padding: 2px;
-    color: white;
 }
 
 #chek{
     display: none;
 }
 
-#chek:checked~nav .menu{
-    display: flex;
+.apartados nav{
+    position: absolute;
+    left: 0;
+    top: 8vh;
+}
+
+.menu{
+    /* Aqui va didplay none */
+    background-color: #2059bb;
     width: 100%;
-    justify-content: space-around;
     list-style: none;
 }
+
+.menu a{
+    text-decoration: none;
+}
+
+#chek:checked~nav .menu{ 
+    display: flex;
+}
+
+
+
+
 
 .botonav i{
     transition: .2s;
@@ -686,8 +687,14 @@ header nav{
                 width: 15vw;
             }
         }
-    }
 
+        .menu{
+            @container scroll-state(stuck:top){
+                margin-top: -2.5vh;
+            }
+        }
+    }
+    
     .logo{
         justify-content: start;
     }
@@ -709,29 +716,55 @@ header nav{
         text-align: center;
     }
 
-    .apartados .botonav i{
-        font-size: 40px;
+    nav .menu{
+        transform: translateY(-40vh);
     }
 
-    .apartados nav .menu li{
-        border-bottom: 2px solid white;
-        padding: 100px;
+    #chek:checked~nav .menu{ 
+        flex-direction: column;
+        height: 30vh;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: translateX(0);
+        transition: .3s;
+        border-radius: 50px;
     }
 
-    .apartados nav .menu li:nth-child(4){
-        border-bottom: none;
+    .menu .title h2{
+        font-size: 30px;
+        color: white;
+        padding: 10px;
+        border-bottom: 1px solid white;
     }
-    
-    .apartados nav .menu li a{
-        font-size: 40px;
-    }
-    
-    #chek:checked~nav .menu{
+
+    .menu .submenu{
         display: flex;
         flex-direction: column;
+        gap: 3vh;
     }
 
+    .submenu li{
+        text-align: start;
+        align-items: center;
+        display: flex;
+        gap: 5vw;
+    }
 
+    .submenu li i{
+        color: white;
+        font-size: 30px;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+        border: 3px solid white;
+    }
+
+    .submenu a{
+        color: white;
+        font-size: 25px;
+    }
 
 
 
