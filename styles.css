@@ -882,12 +882,51 @@ header nav{
 
 }
 
+@media (min-width: 1001px){
 
+    header{
+        .apartados nav{
+            @container scroll-state(stuck: top){
+                margin-top: -3vh;
+            }
+        }
+    }
 
+    .apartados nav{
+        background-color: transparent;
+    }
 
+    .apartados .botonav{
+        position: relative;
+        left: -4vw;
+    }
 
+    nav .menu{
+        transform: translateY(-40vh);
+    }
 
+    #chek:checked~nav .menu{ 
+        transform: translateX(0);
+        transition: .2s;
+        margin-top: 4vh;
+    }
 
+    .menu .title{
+        display: none;
+    }
 
+    .menu .submenu{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
 
+    .submenu li i{
+        font-size: 0;
+    }
 
+    .submenu a{
+        color: white;
+        font-size: 25px;
+    }
+}
