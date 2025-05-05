@@ -154,7 +154,6 @@ header nav{
 }
 
 .menu{
-    /* Aqui va didplay none */
     background-color: #2059bb;
     width: 100%;
     list-style: none;
@@ -346,152 +345,6 @@ header nav{
     box-shadow: 2px 0px 10px black;
 }
 
-
-
-
-
-
-
-
-
-.nuestras{
-    width: 100%;
-    height: 100vh;
-    background-color: #ffe9e9;
-}
-
-.nuestras .contenido{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 2;
-    justify-items: center;
-    align-content: end;
-}
-
-.contenido h1{
-    color: white;
-    font-size: 40px;
-    position: relative;
-    top: -14vh;
-}
-
-.contenidoscroll{
-    justify-items: center;
-}
-
-.contenido .iconos{
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-}
-
-.iconos div{
-    padding: 15px;
-    width: 85px;
-    height: 85px;
-    text-align: center;
-    border-radius: 50%;
-    border: 3px solid white;
-    position: relative;
-    top: -7vh;
-}
-
-.iconos i{
-    font-size: 60px;
-    color: white;
-}
-
-.contenido .cards{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 5vh;
-}
-
-.cards h2{
-    color: white;
-    padding: 10px;
-    border: 3px solid white;
-    margin-bottom: 2vh;
-    border-radius: 15px;
-    position: relative;
-    top: -7vh;
-}
-
-.cards p{
-    font-size: 20px;
-    width: 80%;
-    position: relative;
-    top: -5vh;
-}
-
-.cards .rincon{
-    background-color: #fff6e8;
-    border-radius: 30px;
-    width: 27%;
-    justify-items: center;
-    padding: 15px;
-    box-shadow: 2px 0px 10px black;
-}
-
-.cards .biblioteca{
-    background: linear-gradient(to right, #e8ff76, #fbe5c8);
-    border-radius: 30px;
-    width: 27%;
-    justify-items: center;
-    padding: 15px;
-    box-shadow: 2px 0px 10px black;
-}
-
-.cards .salon{
-    background: linear-gradient(to right, #e8ff76, #fbe5c8);
-    border-radius: 30px;
-    width: 27%;
-    justify-items: center;
-    padding: 15px;
-    box-shadow: 2px 0px 10px black;
-}
-
-.nuestras .fondo{
-    width: 100%;
-    height: 75vh;
-}
-
-.fondo .capa{
-    width: 100%;
-    height: 75vh;
-    background-color: black;
-    opacity: .5;
-    position: absolute;
-}
-
-.fondo .img img{
-    width: 100%;
-    height: 75vh;
-}
-
-
-.mapa{
-    width: 100%;
-    height: 90vh;
-    background-color: #ffe9e9;
-    justify-items: center;
-    align-content: center;
-}
-
-.mapa .map{
-    width: 90%;
-    height: 85vh;
-    border-radius: 30px;
-    border: 2px solid black;
-    align-content: center;
-    text-align: center;
-}
-
-.map iframe{
-    width: 95%;
-    height: 470px;
-}
 
 
 
@@ -727,7 +580,7 @@ header nav{
         align-items: center;
         transform: translateX(0);
         transition: .3s;
-        border-radius: 50px;
+        border-radius: 0 0 50px 50px;
     }
 
     .menu .title h2{
@@ -763,7 +616,7 @@ header nav{
 
     .submenu a{
         color: white;
-        font-size: 25px;
+        font-size: 35px;
     }
 
 
@@ -814,32 +667,176 @@ header nav{
 
 
 
-    .nuestras .contenido{
+
+    .nuestras{
         width: 100%;
-        height: 80vh;
+        height: 100vh;
+        background-color: #ffe9e9;
     }
 
-    .contenido .cards h2{
-        text-align: center;
+    .nuestras .contenido{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
     }
 
     .nuestras .fondo{
         width: 100%;
-        height: 60vh;
+        height: 70vh;
+        background-image: url(fondolib.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center ;
     }
-    
+
     .fondo .capa{
+        position: absolute;
         width: 100%;
-        height: 60vh;
+        height: 70vh;
+        background-color: black;
+        opacity: .5;
+
     }
-    
-    .fondo .img img{
-        height: 60vh;
+
+    .fondo img{
+        display: none;
+    }
+
+    .contenido h1{
+        color: white;
+        font-size: 70px;
+    }
+
+    .cards1{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .cards1::after{
+        content: ">";
+        font-size: 60px;
+        position: absolute;
+        right: 50px;
+        bottom: 40%;
+        color: white;
+        animation: brillar 1.5s infinite;
+    }
+
+    @keyframes brillar{
+        0%{
+            opacity: 1;
+        }
+
+        50%{
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        100%{opacity: .5;
+        }
+    }
+
+    .scrollcards{
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    .scrollcards::-webkit-scrollbar{
+        display: none;
+    }
+
+    .scrollcards .rincon, .biblioteca, .salon{
+        width: 80vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .scrollcards .texto1, .texto2, .texto3{
+        height: 50%;
+        justify-items: center;
+    }
+
+    .scrollcards i{
+        color: white;
+        font-size: 100px;
+        border: 6px solid white;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+    }
+
+    .scrollcards h2{
+        font-size: 40px;
+        width: 70%;
+        color: white;
+        margin-bottom: 3%;
+        padding: 10px;
+        border: 6px solid white;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .scrollcards p{
+        height: 100%;
+        align-content: center;
+        font-size: 35px;
+        border-radius: 40px;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .scrollcards .rincon p{
+        background-color: #fff6e8;
+    }
+
+    .scrollcards .biblioteca p{
+        background: linear-gradient(#e8ff76, #fbe5c8);
+    }
+
+    .scrollcards .salon p{
+        background: linear-gradient(#e8ff76, #fbe5c8);
+    }
+
+    .mapa{
+        background-color: #ffe9e9;
+        width: 100%;
+        height: 95vh;
+        padding: 5%;
+    }
+
+    .map{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        border: 2px solid black;
+        align-content: center;
+        padding: 5px;
     }
 
     .map iframe{
         rotate: 90deg;
         height: 50%;
+        width: 100%;
     }
 
 
@@ -928,5 +925,200 @@ header nav{
     .submenu a{
         color: white;
         font-size: 25px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .nuestras{
+        width: 100%;
+        height: 100vh;
+        background-color: #ffe9e9;
+    }
+    
+    .nuestras .contenido{
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        bottom: 0;
+    }
+    
+    .contenido h1{
+        color: white;
+        font-size: 40px;
+        position: relative;
+        text-align: center;
+    }
+    
+    .contenido .cards1{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5vh;
+    }
+    
+    .cards1 p{
+        font-size: 20px;
+        width: 80%;
+        position: relative;
+    }
+    
+    .cards1 .rincon{
+        width: 30%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .rincon i{
+        color: white;
+        font-size: 50px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+        border: 3px solid white;
+    }
+    
+    .rincon .texto1{
+        justify-items: center;
+        background-color: #fff6e8;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        border-radius: 20px;
+    }
+    
+    .texto1 h2{
+        padding: 10px;
+        border-radius: 20px;
+        border: 2px solid white;
+        position: relative;
+        top: -8vh;
+        color: white;
+    }
+    
+    .cards1 .biblioteca{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .biblioteca i{
+        color: white;
+        font-size: 50px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+        border: 3px solid white;
+    }
+    
+    .biblioteca .texto2{
+        background: linear-gradient(#e8ff76,#fbe5c8);
+        justify-items: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        border-radius: 20px;
+    }
+    
+    .texto2 h2{
+        padding: 10px;
+        border-radius: 20px;
+        border: 2px solid white;
+        position: relative;
+        top: -8vh;
+        color: white;
+    }
+    
+    .cards1 .salon{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .salon i{
+        color: white;
+        font-size: 50px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+        border: 3px solid white;
+    }
+    
+    .salon .texto3{
+        background: linear-gradient(#e8ff76,#fbe5c8);
+        justify-items: center;
+        padding-bottom: 5%;
+        border-radius: 20px;
+    }
+    
+    .texto3 h2{
+        padding: 10px;
+        border-radius: 20px;
+        border: 2px solid white;
+        position: relative;
+        top: -4vh;
+        color: white;
+    }
+    
+    .nuestras .fondo{
+        width: 100%;
+        height: 75vh;
+    }
+    
+    .fondo .capa{
+        width: 100%;
+        height: 75vh;
+        background-color: black;
+        opacity: .5;
+        position: absolute;
+    }
+    
+    .fondo .img img{
+        width: 100%;
+        height: 75vh;
+    }
+    
+    
+    .mapa{
+        width: 100%;
+        height: 90vh;
+        background-color: #ffe9e9;
+        justify-items: center;
+        align-content: center;
+    }
+    
+    .mapa .map{
+        width: 90%;
+        height: 85vh;
+        border-radius: 30px;
+        border: 2px solid black;
+        align-content: center;
+        text-align: center;
+    }
+    
+    .map iframe{
+        width: 95%;
+        height: 470px;
     }
 }
