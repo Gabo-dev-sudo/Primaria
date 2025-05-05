@@ -256,7 +256,7 @@ header nav{
 .secform{
     background-color: #ffe9e9;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     justify-items: center;
     align-content: center;
 }
@@ -403,124 +403,6 @@ header nav{
 
 .calendario img{
     width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-.nuestro{
-    width: 100%;
-    height: 100vh;
-    background-color: #ffe9e9;
-}
-
-.nuestro .contenido2{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 2;
-    justify-items: center;
-    align-content: end;
-}
-
-.contenido2 .titulo{
-    display: flex;
-    align-items: center;
-    position: relative;
-    top: -15vh;
-}
-
-.titulo h1{
-    color: white;
-    font-size: 40px;
-}
-
-.titulo i{
-    color: #979d79;
-    font-size: 50px;
-}
-
-.titulo span{
-    color: white;
-    font-size: 20px;
-}
-
-.contenido2 .cards{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 5vh;
-}
-
-.cards h2{
-    color: white;
-    padding: 10px;
-    border: 3px solid white;
-    margin-bottom: 2vh;
-    border-radius: 15px;
-    position: relative;
-    top: -7vh;
-}
-
-.cards ul{
-    width: 80%;
-    position: relative;
-    top: -5vh;
-}
-
-.cards .objetivos{
-    background-color:#979d79;
-    border-radius: 30px;
-    width: 27%;
-    justify-items: center;
-    padding: 15px;
-    box-shadow: 2px 0px 10px black;
-}
-
-.cards .ejes{
-    background-color: #979d79;
-    border-radius: 30px;
-    width: 27%;
-    justify-items: center;
-    padding: 15px;
-    box-shadow: 2px 0px 10px black;
-}
-
-.cards .logros{
-    background-color: #979d79;
-    border-radius: 30px;
-    width: 27%;
-    justify-items: center;
-    padding: 15px;
-    box-shadow: 2px 0px 10px black;
-}
-
-.nuestro .fondo2{
-    width: 100%;
-    height: 75vh;
-}
-
-.fondo2 .capa2{
-    width: 100%;
-    height: 75vh;
-    background-color: black;
-    opacity: .5;
-    position: absolute;
-}
-
-.fondo2 .img2{
-    width: 100%;
-    height: 75vh;
-}
-
-.fondo2 .img2 img{
-    width: 100%;
-    height: 75vh;
 }
 
 
@@ -756,6 +638,7 @@ header nav{
     .scrollcards .rincon, .biblioteca, .salon{
         width: 80vw;
         height: 50vh;
+        padding-bottom: 3%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -807,14 +690,17 @@ header nav{
 
     .scrollcards .rincon p{
         background-color: #fff6e8;
+        box-shadow: 5px 5px 20px black;
     }
 
     .scrollcards .biblioteca p{
         background: linear-gradient(#e8ff76, #fbe5c8);
+        box-shadow: 5px 5px 20px black;
     }
 
     .scrollcards .salon p{
         background: linear-gradient(#e8ff76, #fbe5c8);
+        box-shadow: 5px 5px 20px black;
     }
 
     .mapa{
@@ -866,6 +752,191 @@ header nav{
 
     .celebraciones div:nth-child(6){
         margin-right: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .nuestras2{
+        width: 100%;
+        height: 100vh;
+        background-color: #ffe9e9;
+    }
+
+    .nuestras2 .contenido2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .nuestras2 .fondo2{
+        width: 100%;
+        height: 70vh;
+        background-image: url(fondolapiz.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center ;
+    }
+
+    .fondo2 .capa2{
+        position: absolute;
+        width: 100%;
+        height: 70vh;
+        background-color: black;
+        opacity: .5;
+
+    }
+
+    .fondo2 img{
+        display: none;
+    }
+
+    .contenido2 .titulo{
+        color: white;
+        display: flex;
+        align-items: center;
+        height: 20vh;
+        width: 80%;
+    }
+
+    .titulo h1{
+        font-size: 55px;
+    }
+
+    .titulo i{
+        color: #979d79;
+        font-size: 50px;
+    }
+
+    .titulo span{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .cards2{
+        width: 100%;
+        justify-items: center;
+    }
+
+    .cards2::after{
+        content: ">";
+        font-size: 60px;
+        position: absolute;
+        right: 50px;
+        bottom: 30%;
+        color: white;
+        animation: brillar2 1.5s infinite;
+    }
+
+    @keyframes brillar2{
+        0%{
+            opacity: 1;
+        }
+
+        50%{
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        100%{opacity: .5;
+        }
+    }
+
+    .scrollcards2{
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    .scrollcards2::-webkit-scrollbar{
+        display: none;
+    }
+
+    .scrollcards2 .objetivos, .ejes, .logros{
+        width: 80vw;
+        height: 50vh;
+        padding-bottom: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .scrollcards2 .texto1-1, .texto1-2, .texto1-3{
+        height: 50%;
+        justify-items: center;
+    }
+
+    .scrollcards2 i{
+        color: white;
+        font-size: 100px;
+        border: 6px solid white;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+    }
+
+    .scrollcards2 h2{
+        font-size: 40px;
+        width: 70%;
+        color: white;
+        margin-bottom: 3%;
+        padding: 10px;
+        border: 6px solid white;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .scrollcards2 ul{
+        height: 100%;
+        align-content: center;
+        font-size: 35px;
+        border-radius: 40px;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .scrollcards2 .objetivos ul{
+        background-color: #e8ff76;
+        box-shadow: 5px 5px 20px black;
+    }
+
+    .scrollcards2 .ejes ul{
+        background: linear-gradient(#e8ff76, #fbe5c8);
+        box-shadow: 5px 5px 20px black;
+    }
+
+    .scrollcards2 .logros ul{
+        background: linear-gradient(#e8ff76, #fbe5c8);
+        box-shadow: 5px 5px 20px black;
     }
 
 
@@ -961,7 +1032,7 @@ header nav{
         text-align: center;
     }
     
-    .contenido .cards1{
+    .contenido .scrollcards{
         display: flex;
         justify-content: space-around;
         margin-bottom: 5vh;
@@ -1004,7 +1075,7 @@ header nav{
     .texto1 h2{
         padding: 10px;
         border-radius: 20px;
-        border: 2px solid white;
+        border: 3px solid white;
         position: relative;
         top: -8vh;
         color: white;
@@ -1040,7 +1111,7 @@ header nav{
     .texto2 h2{
         padding: 10px;
         border-radius: 20px;
-        border: 2px solid white;
+        border: 3px solid white;
         position: relative;
         top: -8vh;
         color: white;
@@ -1075,7 +1146,7 @@ header nav{
     .texto3 h2{
         padding: 10px;
         border-radius: 20px;
-        border: 2px solid white;
+        border: 3px solid white;
         position: relative;
         top: -4vh;
         color: white;
@@ -1121,4 +1192,168 @@ header nav{
         width: 95%;
         height: 470px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .nuestras2{
+        width: 100%;
+        height: 100vh;
+        background-color: #ffe9e9;
+    }
+    
+    .nuestras2 .contenido2{
+        width: 100%;
+        height: 85vh;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        bottom: 0;
+    }
+    
+    .contenido2 .titulo{
+        display: flex;
+        justify-content: center;
+        color: white;
+        align-items: center;
+    }
+
+    .titulo h1{
+        font-size: 40px;
+    }
+
+    .titulo i{
+        color: #979d79;
+        font-size: 40px;
+    }
+
+    .titulo span{
+        font-size: 20px;
+    }
+    
+    .contenido2 .scrollcards2{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5vh;
+    }
+    
+    .cards2 ul{
+        font-size: 20px;
+        width: 80%;
+        position: relative;
+    }
+    
+    .cards2 .objetivos{
+        width: 30%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .objetivos .texto1-1{
+        justify-items: center;
+        background-color: #fff6e8;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        border-radius: 20px;
+    }
+    
+    .texto1-1 h2{
+        padding: 10px;
+        border-radius: 20px;
+        border: 3px solid white;
+        position: relative;
+        top: -8vh;
+        color: white;
+    }
+    
+    .cards2 .ejes{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .ejes .texto1-2{
+        background: linear-gradient(#e8ff76,#fbe5c8);
+        justify-items: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        border-radius: 20px;
+    }
+    
+    .texto1-2 h2{
+        padding: 10px;
+        border-radius: 20px;
+        border: 3px solid white;
+        position: relative;
+        top: -8vh;
+        color: white;
+    }
+    
+    .cards2 .logros{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .logros .texto1-3{
+        background: linear-gradient(#e8ff76,#fbe5c8);
+        justify-items: center;
+        padding-bottom: 5%;
+        border-radius: 20px;
+    }
+    
+    .texto1-3 h2{
+        padding: 10px;
+        border-radius: 20px;
+        border: 3px solid white;
+        position: relative;
+        top: -4vh;
+        color: white;
+    }
+    
+    .nuestras2 .fondo2{
+        width: 100%;
+        height: 75vh;
+    }
+    
+    .fondo2 .capa2{
+        width: 100%;
+        height: 75vh;
+        background-color: black;
+        opacity: .5;
+        position: absolute;
+    }
+    
+    .fondo2 .img2 img{
+        width: 100%;
+        height: 75vh;
+    }
+
+
+
+
+
+
 }
